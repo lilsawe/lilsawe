@@ -6,6 +6,11 @@
 
 📧 2352757837@qq.com　|　💬 微信 / 手机：15993696213　|　📍 广东 · 深圳
 
+<p align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=lilsawe&show_icons=true&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=lilsawe&layout=compact&hide_border=true&langs_count=6" alt="Top Languages" />
+</p>
+
 ---
 
 ## 👋 关于我
