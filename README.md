@@ -2,7 +2,7 @@
 
 **深圳大学 · 计算机技术 硕士（2027 届）**　|　Java 后端 · AI 应用工程　|　深圳
 
-> 两个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime）｜ [order-reliability-kit](https://github.com/lilsawe/order-reliability-kit)（Java · Spring Boot 订单服务实践）
+> 两个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime，可作为库依赖 + 插件式工具）｜ [order-reliability-kit](https://github.com/lilsawe/order-reliability-kit)（Java · Spring Boot 订单服务实践）
 
 📧 2352757837@qq.com　|　💬 微信 / 手机：15993696213　|　📍 广东 · 深圳
 
@@ -33,7 +33,7 @@
 
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
-| [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；7 项测试 + CI 全绿 | Python | MIT |
+| [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；**44 项测试** + CI 全绿 | Python | MIT；**可直接 pip 依赖** + `@tool` 函数工具 + **entry_points 插件发现** |
 | [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 订单可靠性工程实践：接口幂等三层防线、订单状态机、双向对账；Swagger 可直接试接口 + 12 项一键冒烟；**36 项测试**（含 200 线程并发幂等）+ JaCoCo 覆盖率 90% + CI 全绿，附**可复现压测脚本** | **Java 17** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
