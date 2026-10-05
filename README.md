@@ -33,8 +33,8 @@
 
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
-| [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；**44 项测试** + CI 全绿 | Python | MIT；**可直接 pip 依赖** + `@tool` 函数工具 + **entry_points 插件发现** |
-| [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 订单可靠性工程实践：接口幂等三层防线、订单状态机、双向对账；Swagger 可直接试接口 + 12 项一键冒烟；**36 项测试**（含 200 线程并发幂等）+ JaCoCo 覆盖率 90% + CI 全绿，附**可复现压测脚本** | **Java 17** | MIT |
+| [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、**`@tool` 函数工具**、**entry_points 插件发现**、JSONL tracing、Eval harness；**44 项测试** + CI 全绿（3.11 / 3.12 / 3.13） | **Python** | MIT |
+| [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 双模块设计：`kit`（可复用库：通用状态机 / 双向对账引擎 / 幂等存储自动装配）+ `example`（示例服务）；接口幂等三层防线 + 订单状态机 + 双向对账；**36 项测试** + 覆盖率 90% + CI 全绿（含启动冒烟） | **Java 17** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
 
