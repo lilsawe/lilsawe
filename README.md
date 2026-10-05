@@ -33,7 +33,7 @@
 
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
-| [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、**`@tool` 函数工具**、**entry_points 插件发现**、JSONL tracing、Eval harness；**44 项测试** + CI 全绿（3.11 / 3.12 / 3.13） | **Python** | MIT |
+| [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、**`@tool` 函数工具**、**entry_points 插件发现**、JSONL tracing、Eval harness；**66 项测试** + 覆盖率 82% + ruff/mypy 全通过 + CI 三版本矩阵 | **Python** | MIT |
 | [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 双模块设计：`kit`（可复用库：通用状态机 / 双向对账引擎 / 幂等存储自动装配）+ `example`（示例服务）；接口幂等三层防线 + 订单状态机 + 双向对账；**36 项测试** + 覆盖率 90% + CI 全绿（含启动冒烟） | **Java 17** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
@@ -66,7 +66,7 @@ pip install -e . && python -m nanogent
 - **接口幂等三层防线**：Redis SETNX 幂等键（第一层）→ 数据库唯一索引兜底（第二层）→ 重放返回首次创建的订单（第三层）
 - **订单状态机**：`CREATED → PAID → SHIPPED / CANCELLED` 集中式流转规则 + @Version 乐观锁防并发覆盖
 - **双向对账**：本地订单 vs 渠道结算记录，分类输出「一致 / 本地多 / 渠道多 / 金额不一致」四类结果
-- **36 项测试全绿**（kit 15 + example 21），含 **200 线程并发幂等测试**
+- **48 项测试全绿**（kit 27 + example 21），含 **200 线程并发幂等测试**
 - **双模块设计**：`kit`（可复用组件：通用状态机 / 双向对账引擎 / 幂等存储自动装配，引入依赖即用）+ `example`（示例服务）
 - **真实压测数据**（Apple M4 本机 / 单实例 / H2）：独立幂等键下单 **QPS 2460、P99 229 ms**；**200 并发共用同一幂等键 → 服务端仅 1 笔订单**
 - **JaCoCo 覆盖率**：行 85% · 分支 87%；附**可复现压测脚本** `benchmark/load-test.mjs`，CI 上 `mvn verify` 全绿
