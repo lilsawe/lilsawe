@@ -2,7 +2,7 @@
 
 **深圳大学 · 计算机技术 硕士（2027 届）**　|　Java 后端 · AI 应用工程　|　深圳
 
-> 两个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime）｜ [idempotent-order-service](https://github.com/lilsawe/idempotent-order-service)（Java · Spring Boot 订单服务实践）
+> 两个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime）｜ [idempotent-order-service](https://github.com/lilsawe/order-reliability-kit)（Java · Spring Boot 订单服务实践）
 
 📧 2352757837@qq.com　|　💬 微信 / 手机：15993696213　|　📍 广东 · 深圳
 
@@ -34,7 +34,7 @@
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
 | [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；7 项测试 + CI 全绿 | Python | MIT |
-| [**idempotent-order-service**](https://github.com/lilsawe/idempotent-order-service) | Spring Boot 订单服务实践：接口幂等三层防线、订单状态机、双向对账；**21 项测试**（含 200 线程并发幂等）+ JaCoCo 覆盖率 85% + CI 全绿，附**可复现压测脚本** | **Java 17** | MIT |
+| [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 订单可靠性工程实践：接口幂等三层防线、订单状态机、双向对账；Swagger 可直接试接口 + 12 项一键冒烟；**21 项测试**（含 200 线程并发幂等）+ JaCoCo 覆盖率 85% + CI 全绿，附**可复现压测脚本** | **Java 17** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
 
@@ -57,7 +57,7 @@ git clone https://github.com/lilsawe/nanogent && cd nanogent
 pip install -e . && python -m nanogent
 ```
 
-### 2. [idempotent-order-service](https://github.com/lilsawe/idempotent-order-service) — Spring Boot 订单服务实践（幂等 / 状态机 / 对账）
+### 2. [idempotent-order-service](https://github.com/lilsawe/order-reliability-kit) — Spring Boot 订单服务实践（幂等 / 状态机 / 对账）
 
 > Java 17 ｜ Spring Boot 3.3 ｜ Spring Data JPA ｜ Redis ｜ JUnit 5 ｜ Docker Compose ｜ MIT License ｜ GitHub Actions CI
 
