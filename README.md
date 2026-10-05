@@ -22,6 +22,14 @@
 | **AI 工程** | Python、PyTorch、Transformer / 扩散模型；**Codex 等 AI 编程工具重度使用**；LLM 应用与 Agent 工程实践 |
 | **工程能力** | Git、Linux、Docker、阿里云 ECS / CDN / OSS、单元测试 |
 
+## 📦 开源项目
+
+| 项目 | 说明 | 语言 | 许可 |
+|---|---|---|---|
+| [**mini-agent**](https://github.com/lilsawe/mini-agent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness | Python | MIT |
+
+> 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
+
 ## 🚀 项目
 
 ### 1. [mini-agent](https://github.com/lilsawe/mini-agent) — 从零实现的轻量 AI Agent Runtime
@@ -73,6 +81,7 @@ pip install -e . && python -m mini_agent
 
 - 方向：机器遗忘与可信 AI；负责模型实现、实验设计与对比评估（PyTorch / Transformer / 扩散模型）
 - 2 篇论文在投（NeurIPS / ICLR，CCF-A 类匿名评审），第二作者 + 主要执行人
+- 🛡 **代码开放策略**：论文评审期间遵守双盲规则不公开代码，**接收后将在本主页开源**（含方法实现、消融实验与评估脚本）
 
 ## 📫 联系我
 
