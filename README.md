@@ -2,7 +2,7 @@
 
 **深圳大学 · 计算机技术 硕士（2027 届）**　|　Java 后端 · AI 应用工程　|　深圳
 
-> 两个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime）｜ [idempotent-order-service](https://github.com/lilsawe/order-reliability-kit)（Java · Spring Boot 订单服务实践）
+> 两个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime）｜ [order-reliability-kit](https://github.com/lilsawe/order-reliability-kit)（Java · Spring Boot 订单服务实践）
 
 📧 2352757837@qq.com　|　💬 微信 / 手机：15993696213　|　📍 广东 · 深圳
 
@@ -57,11 +57,11 @@ git clone https://github.com/lilsawe/nanogent && cd nanogent
 pip install -e . && python -m nanogent
 ```
 
-### 2. [idempotent-order-service](https://github.com/lilsawe/order-reliability-kit) — Spring Boot 订单服务实践（幂等 / 状态机 / 对账）
+### 2. [order-reliability-kit](https://github.com/lilsawe/order-reliability-kit) — 订单可靠性工程实践（幂等 / 状态机 / 对账）
 
 > Java 17 ｜ Spring Boot 3.3 ｜ Spring Data JPA ｜ Redis ｜ JUnit 5 ｜ Docker Compose ｜ MIT License ｜ GitHub Actions CI
 
-把后端最容易出事故的三件事做成**可运行、可测试**的最小实现：
+把后端最容易出事故的三件事做成**可运行、可测试、开箱即用**的最小实现（Swagger 可直接试接口，12 项冒烟一键验证）：
 
 - **接口幂等三层防线**：Redis SETNX 幂等键（第一层）→ 数据库唯一索引兜底（第二层）→ 重放返回首次创建的订单（第三层）
 - **订单状态机**：`CREATED → PAID → SHIPPED / CANCELLED` 集中式流转规则 + @Version 乐观锁防并发覆盖
