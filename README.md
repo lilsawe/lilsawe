@@ -2,6 +2,8 @@
 
 **深圳大学 · 计算机技术 硕士（2027 届）**　|　Java 后端 · AI 应用工程　|　深圳
 
+> 两个开源项目：[mini-agent](https://github.com/lilsawe/mini-agent)（Python · AI Agent Runtime）｜ [idempotent-order-service](https://github.com/lilsawe/idempotent-order-service)（Java · Spring Boot 订单服务实践）
+
 📧 2352757837@qq.com　|　💬 微信 / 手机：15993696213　|　📍 广东 · 深圳
 
 ---
@@ -27,6 +29,7 @@
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
 | [**mini-agent**](https://github.com/lilsawe/mini-agent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；7 项测试 + CI 全绿 | Python | MIT |
+| [**idempotent-order-service**](https://github.com/lilsawe/idempotent-order-service) | Spring Boot 订单服务实践：接口幂等三层防线、订单状态机、双向对账；13 项测试 + CI 全绿 | **Java 17** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
 
@@ -49,19 +52,29 @@ git clone https://github.com/lilsawe/mini-agent && cd mini-agent
 pip install -e . && python -m mini_agent
 ```
 
-### 2. 华为终端 · 门店销售助手系统（企业项目，代码未开源）
+### 2. [idempotent-order-service](https://github.com/lilsawe/idempotent-order-service) — Spring Boot 订单服务实践（幂等 / 状态机 / 对账）
+
+> Java 17 ｜ Spring Boot 3.3 ｜ Spring Data JPA ｜ Redis ｜ JUnit 5 ｜ Docker Compose ｜ MIT License ｜ GitHub Actions CI
+
+把后端最容易出事故的三件事做成**可运行、可测试**的最小实现：
+
+- **接口幂等三层防线**：Redis SETNX 幂等键（第一层）→ 数据库唯一索引兜底（第二层）→ 重放返回首次创建的订单（第三层）
+- **订单状态机**：```CREATED → PAID → SHIPPED / CANCELLED``` 集中式流转规则 + @Version 乐观锁防并发覆盖
+- **双向对账**：本地订单 vs 渠道结算记录，分类输出「一致 / 本地多 / 渠道多 / 金额不一致」四类结果
+- **13 项单元与集成测试全绿**（含 @SpringBootTest 端到端冒烟），GitHub Actions 上 ```mvn verify``` 通过
+### 3. 华为终端 · 门店销售助手系统（企业项目，代码未开源）
 
 - 参与后端服务开发与迭代，支撑门店销售业务的数据查询与维护
 - **隐私字段加密**：按字段加密、失败重试、并发控制、分时段低峰执行——在合规约束下完成存量数据治理
 - 技术栈：Java / Spring / MySQL / Redis
 
-### 3. 跨境电商 ERP 服务端（企业项目，代码未开源）
+### 4. 跨境电商 ERP 服务端（企业项目，代码未开源）
 
 - 对接亚马逊 **SP-API**：OAuth 授权、订单与库存同步
 - **库存-财务对账**与**补货状态机**：事务 + 幂等设计，防止重复入账
 - RBAC 权限体系与接口鉴权；跨境电商 ERP 服务端模块开发
 
-### 4. JavaWeb 商城（课程实训）
+### 5. JavaWeb 商城（课程实训）
 
 - 完成后端模块设计与开发，覆盖商品、订单等核心流程
 - 技术栈：Java / Servlet / JSP / MySQL
