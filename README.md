@@ -26,7 +26,7 @@
 
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
-| [**mini-agent**](https://github.com/lilsawe/mini-agent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness | Python | MIT |
+| [**mini-agent**](https://github.com/lilsawe/mini-agent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；7 项测试 + CI 全绿 | Python | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
 
@@ -34,7 +34,7 @@
 
 ### 1. [mini-agent](https://github.com/lilsawe/mini-agent) — 从零实现的轻量 AI Agent Runtime
 
-> Python ｜ Agent Runtime ｜ Function Calling ｜ Tracing & Eval
+> Python ｜ Agent Runtime ｜ Function Calling ｜ Tracing & Eval ｜ MIT License ｜ GitHub Actions CI
 
 用少量可读代码实现 Agent 的核心工作流，**不是对 LangChain / CrewAI 的封装**，方便快速看清 Agent loop 的真实实现：
 
@@ -42,7 +42,7 @@
 - 基于 OpenAI-compatible Function Calling 的 LLM 调用封装
 - 可扩展工具系统：抽象 `Tool` 基类 + 注册表 + 统一 JSON Schema 描述
 - JSONL tracing（记录 LLM request/response、tool_call、tool_result）+ **Evaluation harness**（JSONL 任务集评估工具调用链路，输出 JSON / Markdown 报告）
-- 单元测试覆盖工具注册、计算器安全边界、tool-call、tracing 与 eval 流程
+- **7 项单元测试全绿**，覆盖工具注册、计算器安全边界、tool-call、tracing 与 eval 流程；配 **GitHub Actions CI**（Python 3.11 / 3.12 / 3.13 三版本矩阵）
 
 ```bash
 git clone https://github.com/lilsawe/mini-agent && cd mini-agent
