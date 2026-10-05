@@ -34,7 +34,7 @@
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
 | [**mini-agent**](https://github.com/lilsawe/mini-agent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、工具注册表、JSONL tracing、Eval harness；7 项测试 + CI 全绿 | Python | MIT |
-| [**idempotent-order-service**](https://github.com/lilsawe/idempotent-order-service) | Spring Boot 订单服务实践：接口幂等三层防线、订单状态机、双向对账；13 项测试 + CI 全绿 | **Java 17** | MIT |
+| [**idempotent-order-service**](https://github.com/lilsawe/idempotent-order-service) | Spring Boot 订单服务实践：接口幂等三层防线、订单状态机、双向对账；**21 项测试**（含 200 线程并发幂等）+ JaCoCo 覆盖率 85% + CI 全绿，附**可复现压测脚本** | **Java 17** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
 
