@@ -34,7 +34,7 @@
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
 | [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、**`@tool` 函数工具**、**entry_points 插件发现**、JSONL tracing、Eval harness；**66 项测试** + 覆盖率 82% + ruff/mypy 全通过 + CI 三版本矩阵 | **Python** | MIT |
-| [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 双模块设计：`kit`（可复用库：通用状态机 / 双向对账引擎 / 幂等存储自动装配）+ `example`（示例服务）；接口幂等三层防线 + 订单状态机 + 双向对账；**36 项测试** + 覆盖率 90% + CI 全绿（含启动冒烟） | **Java 17** | MIT |
+| [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 双模块设计：`kit`（可复用库：通用状态机 / 双向对账引擎 / 幂等存储自动装配）+ `example`（示例服务）；接口幂等三层防线 + 订单状态机 + 双向对账；**48 项测试**（kit 27 / example 21）+ 行覆盖率 95.2% + CI 全绿（含启动冒烟） | **Java 17** | MIT |
 | [**inventory-cost-kit**](https://github.com/lilsawe/inventory-cost-kit) | 库存成本核心机制的 Java 重写：金额守恒分摊、双层指纹、任务租约 + 认领标识、结算快照版本化；**30 项测试** + 行覆盖率 85% + CI 全绿 | **Java 21** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
@@ -133,4 +133,4 @@ mvn verify
 
 ---
 
-<sub>Last updated: 2026-10-05</sub>
+<sub>Last updated: 2026-10-18</sub>
