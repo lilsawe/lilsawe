@@ -2,7 +2,7 @@
 
 **深圳大学 · 计算机技术 硕士（2027 届）**　|　Java 后端 · AI 应用工程　|　深圳
 
-> 三个开源项目：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime，可作为库依赖 + 插件式工具）｜ [order-reliability-kit](https://github.com/lilsawe/order-reliability-kit)（Java · Spring Boot 订单服务实践）｜ [inventory-cost-kit](https://github.com/lilsawe/inventory-cost-kit)（Java · 库存成本核心机制重写）
+> 公开仓库：[nanogent](https://github.com/lilsawe/nanogent)（Python · AI Agent Runtime）。另有 Java 工程实践：order-reliability-kit、inventory-cost-kit（私有仓库，面试可演示）。
 
 📧 2352757837@qq.com　|　💬 微信 / 手机：15993696213　|　📍 广东 · 深圳
 
@@ -34,8 +34,8 @@
 | 项目 | 说明 | 语言 | 许可 |
 |---|---|---|---|
 | [**nanogent**](https://github.com/lilsawe/nanogent) | 从零实现的轻量 AI Agent Runtime：Agent loop、Function Calling、**`@tool` 函数工具**、**entry_points 插件发现**、JSONL tracing、Eval harness；**66 项测试** + 覆盖率 82% + ruff/mypy 全通过 + CI 三版本矩阵 | **Python** | MIT |
-| [**order-reliability-kit**](https://github.com/lilsawe/order-reliability-kit) | 双模块设计：`kit`（可复用库：通用状态机 / 双向对账引擎 / 幂等存储自动装配）+ `example`（示例服务）；接口幂等三层防线 + 订单状态机 + 双向对账；**48 项测试**（kit 27 / example 21）+ 行覆盖率 95.2% + CI 全绿（含启动冒烟） | **Java 17** | MIT |
-| [**inventory-cost-kit**](https://github.com/lilsawe/inventory-cost-kit) | 库存成本核心机制的 Java 重写：金额守恒分摊、双层指纹、任务租约 + 认领标识、结算快照版本化；**30 项测试** + 行覆盖率 85% + CI 全绿 | **Java 21** | MIT |
+| **order-reliability-kit**（私有，面试可演示） | 双模块设计：`kit`（可复用库：通用状态机 / 双向对账引擎 / 幂等存储自动装配）+ `example`（示例服务）；接口幂等三层防线 + 订单状态机 + 双向对账；**48 项测试**（kit 27 / example 21）+ 行覆盖率 95.2% + CI 全绿（含启动冒烟） | **Java 17** | MIT |
+| **inventory-cost-kit**（私有，面试可演示） | 库存成本核心机制的 Java 重写：金额守恒分摊、双层指纹、任务租约 + 认领标识、结算快照版本化；**30 项测试** + 行覆盖率 85% + CI 全绿 | **Java 21** | MIT |
 
 > 其余企业项目与在投论文代码因**保密 / 双盲评审**原因暂不公开，可在面试中详细说明设计与实现。
 
@@ -58,7 +58,7 @@ git clone https://github.com/lilsawe/nanogent && cd nanogent
 pip install -e . && python -m nanogent
 ```
 
-### 2. [order-reliability-kit](https://github.com/lilsawe/order-reliability-kit) — 订单可靠性工程实践（幂等 / 状态机 / 对账）
+### 2. order-reliability-kit — 订单可靠性工程实践（幂等 / 状态机 / 对账）
 
 > Java 17 ｜ Spring Boot 3.3 ｜ Spring Data JPA ｜ Redis ｜ JUnit 5 ｜ Docker Compose ｜ MIT License ｜ GitHub Actions CI
 
@@ -89,7 +89,7 @@ pip install -e . && python -m nanogent
 - 完成后端模块设计与开发，覆盖商品、订单等核心流程
 - 技术栈：Java / Servlet / JSP / MySQL
 
-### 6. [inventory-cost-kit](https://github.com/lilsawe/inventory-cost-kit) — 库存成本核心机制的 Java 重写
+### 6. inventory-cost-kit — 库存成本核心机制的 Java 重写
 
 > Java 21 ｜ Spring Boot 3 ｜ Spring JDBC ｜ H2（MySQL 模式）｜ MIT License ｜ GitHub Actions CI
 
@@ -102,8 +102,7 @@ pip install -e . && python -m nanogent
 - **30 个测试 · JaCoCo 行覆盖率 85% · CI 全绿**
 
 ~~~bash
-git clone https://github.com/lilsawe/inventory-cost-kit && cd inventory-cost-kit
-mvn verify
+# 私有仓库，面试时可投屏走查
 ~~~
 
 ## 🎓 教育背景
